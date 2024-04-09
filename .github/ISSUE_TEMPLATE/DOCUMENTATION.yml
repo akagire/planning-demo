@@ -1,0 +1,50 @@
+name: ドキュメント作成
+description: 散らばった情報の整理・ストック化や、ユーザーガイド・ヘルプページの充実といったライティング作業に利用するイシューテンプレートです
+title: "【文章作成】"
+labels: [documentation]
+projects: ["akagire/3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        - 【任意】とある項目以外は全て必須です、必ず記入してください
+        - 必要に応じてラベルを追加してもよいですが `documentation` ラベルは外さないでください
+  - type: input
+    id: summary
+    attributes:
+      label: 用意するドキュメントの概要
+      description: 作成するドキュメントの概要を記入してください
+      placeholder: |
+        新規メンバーのオンボーディング資料を作成する
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: ドキュメントを用意する理由
+      description: ドキュメントを作成する理由を記入してください
+      placeholder: |
+        例1: ユーザーからの問い合わせが多発しているため、CS負荷を低減するため
+        例2: 新規参画者向けの説明資料が存在せず、オンボーディング負荷が増大しているため
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: ドキュメントの整備方法
+      description: ドキュメントをどのように整備するかを記入してください
+      placeholder: |
+        例1: Notion のヘルプページを更新する
+        例2: Google Drive の xxx と xxx の資料をひとつにまとめて xxx に格納する
+    validations:
+      required: true
+  - type: textarea
+    id: subtasks
+    attributes:
+      label: 【任意】サブタスク
+      description: 必要に応じてサブタスクを記入してください。後から編集・追記しても構いません。
+      placeholder: |
+        例:
+        - [ ] xxx を xxx にする
+    validations:
+      required: false

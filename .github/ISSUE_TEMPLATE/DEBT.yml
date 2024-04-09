@@ -1,0 +1,44 @@
+name: 【エンジニア専用】技術負債解消
+description: 実装を進める中で増大した認知負荷を低減させるためのイシューテンプレートです。
+title: "【技術負債解消】"
+labels: [debt]
+projects: ["akagire/3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **このイシューはエンジニア専用です！**
+
+        - 1日以上のまとまった作業時間が必要な内容を想定しています
+        - 【任意】とある項目以外は全て必須です、必ず記入してください
+        - 必要に応じてラベルを追加してもよいですが `debt` ラベルは外さないでください
+  - type: input
+    id: summary
+    attributes:
+      label: 対応事項
+      description: 技術負債解消のために行う対応事項を記入してください（リファクタ・記法・インフラ構成等）
+      placeholder: |
+        xxx と xxx について、処理を共通化できるため、対応したい
+    validations:
+      required: true
+  - type: textarea
+    id: benefits
+    attributes:
+      label: この負債解消で得られるメリット
+      description: 技術負債を解消することで得られるメリットを記入してください
+      placeholder: |
+        例1: コード量が減り、実装者の認知負荷が低減し、今後の実装速度の向上が見込まれる
+        例2: コードのフォーマットが改善され、可読性が向上することで、今後の実装速度の向上が見込まれる
+        例3: よりパフォーマンスがよく、コストも削減できるインフラ構成になることで、サービス運用コストが低減する
+    validations:
+      required: true
+  - type: textarea
+    id: subtasks
+    attributes:
+      label: 【任意】サブタスク
+      description: 必要に応じてサブタスクを記入してください。後から編集・追記しても構いません。
+      placeholder: |
+        例:
+        - [ ] xxx を xxx にする
+    validations:
+      required: false

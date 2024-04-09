@@ -1,0 +1,69 @@
+name: バグレポート
+description: 意図しない不具合があったことを報告するためのイシューテンプレートです
+title: "【バグ】"
+labels: [bug]
+projects: ["akagire/3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **:warning: enhancement イシューで考慮しきれなかった事象に伴う不具合はバグではなく仕様です。その場合 bug ではなく wontfix を起票してください。**
+
+        - 【任意】とある項目以外は全て必須です、必ず記入してください
+        - 必要に応じてラベルを追加してもよいですが bug ラベルは外さないでください
+  - type: textarea
+    id: topic-feature
+    attributes:
+      label: 不具合が生じている機能
+      description: 不具合が発生している機能について記入してください
+      placeholder: xxx を xxx した時、 xxx にならない
+    validations:
+      required: true
+  - type: input
+    id: original-issue
+    attributes:
+      label: 意図した挙動が記載された元の enhancement イシュー
+      description: 意図した挙動が記載されているenhancementイシューの番号を記入してください
+      placeholder: "#1"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: 不具合が発生したOS
+      description: 不具合が発生したOSとそのバージョンを記入してください
+      placeholder: macOS 14.4.1（23E224）
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: 不具合が発生したブラウザ
+      description: 不具合が発生したブラウザとそのバージョンを記入してください
+      placeholder: Google Chrome 123.0.6312.107（Official Build） （arm64）
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 【任意】スクリーンショット
+      description: 再現時の静止画や動画を添付してもらえると解決の糸口になることがあります。
+    validations:
+      required: false
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 【任意】その他トラブルに関連しそうな参考情報
+      description: 不具合について、上記に収まらない情報があれば記載をお願いします。些細な情報でも構いません。その情報が不具合の解消につながることがあります。
+    validations:
+      required: false
+  - type: textarea
+    id: subtasks
+    attributes:
+      label: 【任意】サブタスク
+      description: 必要に応じてサブタスクを記入してください。後から編集・追記しても構いません。
+      placeholder: |
+        例:
+        - [ ] xxx を xxx にする
+    validations:
+      required: false

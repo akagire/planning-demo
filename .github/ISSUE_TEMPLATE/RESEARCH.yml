@@ -1,0 +1,53 @@
+name: 調査
+description: 要件定義・実装などのために事前調査が必要な場合に利用するイシューテンプレートです
+title: "【調査】"
+labels: [research]
+projects: ["akagire/3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        - 【任意】とある項目以外は全て必須です、必ず記入してください
+        - 必要に応じてラベルを追加してもよいですが `research` ラベルは外さないでください
+  - type: input
+    id: content
+    attributes:
+      label: 調査内容
+      description: 調査する内容について記入してください
+      placeholder: 例：xxx について xxx ができること、xxx ができないことを調査する
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 調査目的
+      description: 調査の目的を記入してください
+      placeholder: 例：#1 の実現可能性を検討する、など
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: 報告方法
+      description: 調査結果の報告方法を記入してください
+      placeholder: 例：イシューコメントとして残す、Notion や Google Docs にまとめる、等
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: 完了条件
+      description: 調査が完了したと判断する条件を記入してください
+      placeholder: 例：調査結果についてサービスオーナー・PdM・リードデザイナー・リードエンジニアからのOKが得られている
+    validations:
+      required: true
+  - type: textarea
+    id: subtasks
+    attributes:
+      label: 【任意】サブタスク
+      description: 必要に応じてサブタスクを記入してください。後から編集・追記しても構いません。
+      placeholder: |
+        例:
+        - [ ] xxx を xxx にする
+    validations:
+      required: false

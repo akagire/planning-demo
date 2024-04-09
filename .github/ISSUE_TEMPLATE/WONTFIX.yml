@@ -1,0 +1,51 @@
+name: 仕様変更
+description: 既にリリースされている機能の挙動を変更させたいときに利用するイシューテンプレートです
+title: "【仕様変更】"
+labels: [wontfix]
+projects: ["akagire/3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        - 【任意】とある項目以外は全て必須です
+        - 必要に応じてラベルを追加してもよいですが `wontfix` ラベルは外さないでください
+  - type: input
+    id: summary
+    attributes:
+      label: 仕様変更の概要
+      description: 仕様変更の概要を記入してください
+      placeholder: |
+        例: #1 により実装した xxx について、 xxx を xxx になるようにする
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 変更理由
+      description: 仕様変更の理由を記入してください
+      placeholder: |
+        例1: リサーチの結果判明、 xxx のユーザー は xxx することがわかったため xxx は xxx より xxx が望ましいと判断したため。
+        例2: リリースされた機能について、想定したユーザビリティを満たしていないため（使いにくいUI、画面表示が遅い）
+    validations:
+      required: true
+  - type: textarea
+    id: conditions
+    attributes:
+      label: 【任意】このイシューが着手可能になる条件
+      description: このイシューに着手するために必要な条件があれば記入してください
+      placeholder: |
+        例：
+        - [ ] xxx の調査が完了している #3
+        - [ ] xxx の機能がリリースされている #4
+    validations:
+      required: false
+  - type: textarea
+    id: subtasks
+    attributes:
+      label: 【任意】サブタスク
+      description: 必要に応じてサブタスクを記入してください。後から編集・追記しても構いません。
+      placeholder: |
+        例:
+        - [ ] xxx を xxx にする
+    validations:
+      required: false
