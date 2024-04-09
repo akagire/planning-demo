@@ -1,0 +1,77 @@
+name: 機能追加
+description: プロダクトへ機能追加する際のイシューテンプレートです
+title: "【機能追加】"
+labels: ["enhancement"]
+projects: ["akagire/3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        - 【任意】とある項目以外は全て必須です
+  - type: input
+    id: description
+    attributes:
+      label: 機能の概要
+      description: どのような機能が必要ですか？
+      placeholder: xxx を xxx できるようにする
+    validations:
+      required: true
+  - type: input
+    id: user-story
+    attributes:
+      label: ユーザーストーリー
+      description: どんなユーザーのどんな課題を解消しますか？
+      placeholder: xxx が xxx した時、 xxx という課題・ニーズがあるため xxx できるようにする。
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: このイシューが着手可能になる条件
+      description: この機能を実装するために必要な条件はありますか？
+      placeholder: "- [ ] xxx の調査が完了している"
+    validations:
+      required: false
+  - type: textarea
+    id: sub-task
+    attributes:
+      label: サブタスク
+      description: 後から編集、追記して構いません。細分化は、開発者やデザイナーが行うことを推奨します。
+      placeholder: "- [ ] xxx の調査が完了している"
+    validations:
+      required: false
+  # - type: dropdown
+  #   id: version
+  #   attributes:
+  #     label: Version
+  #     description: What version of our software are you running?
+  #     options:
+  #       - 1.0.2 (Default)
+  #       - 1.0.3 (Edge)
+  #     default: 0
+  #   validations:
+  #     required: true
+  # - type: dropdown
+  #   id: browsers
+  #   attributes:
+  #     label: What browsers are you seeing the problem on?
+  #     multiple: true
+  #     options:
+  #       - Firefox
+  #       - Chrome
+  #       - Safari
+  #       - Microsoft Edge
+  # - type: textarea
+  #   id: logs
+  #   attributes:
+  #     label: Relevant log output
+  #     description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+  #     render: shell
+  # - type: checkboxes
+  #   id: terms
+  #   attributes:
+  #     label: Code of Conduct
+  #     description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
+  #     options:
+  #       - label: I agree to follow this project's Code of Conduct
+  #         required: true
